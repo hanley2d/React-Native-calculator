@@ -1,5 +1,5 @@
 /**
- * file App.js
+ * file: App.js
  * author: David Hanley
  * last-modified: 2022-02-15
  */
@@ -20,11 +20,18 @@ import { FontAwesome5 } from '@expo/vector-icons';
  * side-effects: Calculator magic.
  */
 const Calculator = () => {
-  // array for buttonValues which can be used with array.map() function to assign components and styles. order matters.
-  const buttonValues = [ 'C', '/', '7', '8', '9', '*', '4', '5', '6', '-', '1', '2', '3', '+', '0', '.', 'delete', '=', ];
+  // array for buttonValues which can be used with array.map() function to assign components and styles. 
+  // order matters.
+  const buttonValues = [ 
+    'C', '/', 
+    '7', '8', '9', '*', 
+    '4', '5', '6', '-', 
+    '1', '2', '3', '+', 
+    '0', '.', 'delete', '=', 
+  ];
   // getter/setter for display
   const [display, setDisplay] = useState('');
-  // currNumber stores the current number which can be used to check if it already has a decimal point or not.
+  // currNumber can be used to check if there has already been a decimal entered.
   const [currNumber, setCurrNumber] = useState(''); 
   
   /**
